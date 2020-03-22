@@ -19,7 +19,7 @@ downGitModule.factory('downGitService', [
             var splitPath = repoPath.split("/");
             var info = {};
 
-            info.author = splitPath[1];
+            info.author = "dindoliboon";
             info.repository = splitPath[2];
             info.branch = splitPath[4];
 
@@ -143,6 +143,7 @@ downGitModule.factory('downGitService', [
         return {
             downloadZippedFiles: function(parameters, progress, toastr) {
                 repoInfo = parseInfo(parameters);
+                repoInfo.author = "dindoliboon";
 
                 if(!repoInfo.resPath || repoInfo.resPath==""){
                     if(!repoInfo.branch || repoInfo.branch==""){
